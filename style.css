@@ -1,0 +1,401 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #fff;
+    color: #333;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Dark blueish purple with slight transparency */
+    padding: 10px 30px;
+    border-radius: 50px; /* this gives it the "pill" shape */
+    border: 1px solid #4b4b4b; /* Grayish blue border around the navbar */
+    z-index: 1000;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-menu li a {
+    text-decoration: none;
+    color: #4b4b4b;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-menu li a:hover {
+    color: #3dd5a5; /* optional: blue highlight on hover */
+  }  
+
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px 50px; /* enough top padding so it's below the navbar */
+    min-height: 100vh;
+  }
+  
+  .home-content {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* space between image and text */
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* make it a circle */
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .intro-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  
+  .intro-text h2 {
+    font-size: 28px;
+    font-weight: 400;
+    color: #555;
+  }  
+  
+  section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .profile-pic {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    text-align: center;
+  }
+  
+  .intro h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .intro h2 {
+    font-size: 1.5rem;
+    color: #777;
+  }
+
+  .about {
+    display: flex;
+    width: 80vw;
+    align-self: center;
+    flex-direction: column;
+  }
+  
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .carousel img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .carousel button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .resume-pdf {
+    width: 80%;
+    height: 600px;
+    border: 1px solid #ccc;
+    margin-top: 1rem;
+  }
+  
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff; /* match the body background */
+    color: #333; /* normal text color */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #ccc; /* light gray line at top */
+    z-index: 1000;
+  }
+  
+  .footer-content {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+.footer-content .left, .footer-content .right {
+  display: flex;
+  align-items: center;
+}
+
+.footer-content .left {
+  padding-left: 20ox; /* 5vw from the left edge */
+}
+
+.footer-content .right {
+  padding-right: 20px; /* 5vw from the right edge */
+}
+  
+  .footer-icons a {
+    margin-left: 15px;
+    text-decoration: none;
+  }
+  
+  .footer-icons .icon {
+    width: 24px;
+    height: 24px;
+    filter: none; /* no invert now since background is light */
+  }  
+  
+  .projects {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  }
+  
+  .project-card h3 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .project-card p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  .contact {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .contact p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    margin-right: 1.5rem;
+  }
+  
+  .form-group label {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-group input:focus, .form-group textarea:focus {
+    border-color: #3dd5a5;
+    outline: none;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+  }
+
+  /* Apply Consolas font to all form inputs and textarea */
+input, textarea {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+/* Customize the placeholder text */
+input::placeholder, textarea::placeholder {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #777;  /* Light grey for the placeholder text */
+}
+
+/* Adjust textarea specifically for better display */
+textarea {
+  height: 150px;
+  resize: vertical;  /* Allow vertical resizing */
+}
+
+/* Optional: Focus styling */
+input:focus, textarea:focus {
+  border-color: #3dd5a5;  /* Blue border on focus */
+  outline: none;
+}
+
+  
+  .submit-btn {
+    background-color: #4e4e4e;
+    color: white;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #000000;
+  }
+
+
+/* Style for the theme toggle icon */
+.theme-toggle {
+  position: fixed;
+  top: 27px;
+  right: 50px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.theme-toggle img {
+  width: 20;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Dark theme styles */
+body.dark-mode {
+  background-color: #0a0a1d; /* Dark blueish purple */
+  color: #fff;
+  
+}
+
+body.dark-mode nav {
+  background-color: rgba(10, 10, 29, 0.9); /* Dark blueish purple with slight transparency */
+  color: #b0c4de;  /* Light grayish blue */
+  border: 1px solid #b0c4de; /* Grayish blue border around the navbar */
+  border-radius: 50px; /* Rounded corners for the pill shape */
+  padding: 10px 30px; /* Ensure padding stays intact */
+}
+
+body.dark-mode nav a {
+  color: #b0c4de; /* Light grayish blue for links */
+}
+
+body.dark-mode nav a:hover {
+  color: #3dd5a5;  /* Example hover color */
+}
+
+body.dark-mode nav .navbar-menu {
+  color: #b0c4de;  /* Ensure all text within navbar menu is grayish blue */
+}
+
+body.dark-mode .footer {
+  background-color: rgba(10, 10, 29, 1); /* Dark blueish purple with slight transparency */
+  color: #b0c4de; /* Light grayish blue */
+  border-top: 1px solid #b0c4de; /* Grayish blue line at the top */
+}
