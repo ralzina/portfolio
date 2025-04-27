@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your Name - Portfolio</title>
+  <title>Rene Alzina</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
       </nav>
       
     <div class="theme-toggle" id="theme-toggle">
-        <img src="images/moon-icon.svg" alt="Theme Toggle" id="theme-icon" class="icon">
+        <img src="images/sun-icon.svg" alt="Theme Toggle" id="theme-icon" class="icon">
     </div>
   <section id="home" class="home" style="padding-top: 0vh">
     <img src="images/headshot.jpeg" alt="Profile Picture" class="profile-pic" style="margin-right: 5vw">
@@ -30,7 +30,7 @@
 
   <section id="about" class="about" style="padding-top: 13vh">
     <h2>About Me</h2>
-    <p style="margin-bottom: 50px; text-align: justify;">I'm a passionate sophomore computer science student from the 
+    <p class="text" style="text-align: justify;">I'm a passionate sophomore computer science student from the 
         University of Notre Dame graduating May 2027. I am also minoring in Engineering Corporate Practice.
         I am very interested in web development, data science, and computer networking. I have pursued
         multiple projects in these areas whether by my own, in classes, clubs, or as research with Notre Dame.
@@ -45,32 +45,61 @@
 
         In my free time, I enjoy running, playing guitar, listening to music, spending time with friends, and obvioulsy coding!
         </p>
-    <div class="carousel">
-      <button id="prev">&#8592;</button>
-      <img id="carousel-image" src="images/about-photo1.png" alt="Coding Image">
-      <button id="next">&#8594;</button>
-    </div>
+
+<div class="pic-ctn">
+    <img src="https://picsum.photos/200/300?t=1" alt="" class="pic">
+    <img src="https://picsum.photos/200/300?t=2" alt="" class="pic">
+    <img src="https://picsum.photos/200/300?t=3" alt="" class="pic">
+    <img src="https://picsum.photos/200/300?t=4" alt="" class="pic">
+    <img src="https://picsum.photos/200/300?t=5" alt="" class="pic">
+  </div>
+  
   </section>
 
   <section id="projects" class="projects" style="padding-top: 13vh">
     <h2>Projects</h2>
     <div class="projects-grid">
+        <a href="https://ralzina.github.io/Study_Helper_App/" target="_blank">
       <div class="project-card">
         <h3>Study Helper App</h3>
         <p>Facilitates studying through different techniques.</p>
+
+        <div class="project-languages">
+            <span class="tag html">HTML</span>
+            <span class="tag css">CSS</span>
+            <span class="tag javascript">JavaScript</span>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Project 2</h3>
-        <p>A brief description of this amazing project and its features.</p>
+        </a>
+      <a href="https://public.tableau.com/app/profile/rene.alzina/viz/DataClub_84_51_final/GeneralAnalysis" target="_blank">      
+        <div class="project-card">
+        <h3>84.51º Data Analysis and Visualizaiton</h3>
+        <p>Analyzed 20M+ lines of raw data with Pandas and created dashboards with Tableau.</p>
+
+        <div class="project-languages">
+            <span class="tag python">Python</span>
+            <span class="tag tableau">Tableau</span>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Project 3</h3>
-        <p>A brief description of this amazing project and its features.</p>
+      </a>
+      <a href="https://docs.google.com/presentation/d/1LRR6VyECsIrM5wETy8YN1EMhj-vr1AKD/edit?usp=sharing&ouid=102363376871042594645&rtpof=true&sd=true" target="_blank">      
+        <div class="project-card">
+        <h3>Health Equity Data Science Challenge</h3>
+        <p>Analyze 100k+ lines of hospital data in Indiana with Pandas to determine health equity problems.</p>
+        <div class="project-languages">
+            <span class="tag python">Python</span>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Project 4</h3>
-        <p>A brief description of this amazing project and its features.</p>
+      </a>
+      <a href="https://docs.google.com/presentation/d/1M2qeWht1SbA-8QGYMK1o-EhBzfiXRQlDHM3j93J0KT4/edit?usp=sharing" target="_blank">      
+        <div class="project-card">
+        <h3>Cleveland Guardians Instagram Engagement Analysis</h3>
+        <p>Scraped Instagram data to determine what drived the most engagement (likes/comments).</p>
+        <div class="project-languages">
+            <span class="tag python">Python</span>
+        </div>
       </div>
+      </a>
     </div>
   </section>
   
@@ -79,23 +108,25 @@
     <iframe src="resume.pdf" frameborder="0" class="resume-pdf"></iframe>
   </section>
 
-  <section id="contact" class="contact" style="padding-top: 13vh">
+  <section id="contact" class="contact-container" style="padding-top: 13vh">
     <h2>Contact</h2>
-    <p>Feel free to send me a message, and I will get back to you as soon as possible!</p>
+    <p class="text">Feel free to send me a message, and I will get back to you as soon as possible!</p>
     <form id="contact-form">
-      <div class="form-group">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <div class="contact-form">
+        <div class="form-group">
+            <label class="form-title" for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder=">_" required>
+        </div>
+        <div class="form-group">
+            <label class="form-title" for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder=">_" required>
+        </div>
+        <div class="form-group">
+            <label class="form-title" for="message">Your Message:</label>
+            <textarea id="message" name="message" placeholder=">_" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
       </div>
-      <div class="form-group">
-        <label for="email">Your Email:</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Your Message:</label>
-        <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
-      </div>
-      <button type="submit" class="submit-btn">Send Message</button>
     </form>
   </section>
   
@@ -140,10 +171,10 @@
       <div class="right">
         <div class="footer-icons">
           <a href="https://github.com/ralzina" target="_blank">
-            <img id="giticon" src="images/github_icon.svg" alt="GitHub" class="icon">
+            <img id="giticon" src="images/github-light.svg" alt="GitHub" class="icon">
           </a>
           <a href="https://www.linkedin.com/in/rene-alzina/" target="_blank">
-            <img id="linkicon" src="images/linkedin_icon.svg" alt="LinkedIn" class="icon">
+            <img id="linkicon" src="images/linkedin-light.svg" alt="LinkedIn" class="icon">
           </a>
         </div>
       </div>

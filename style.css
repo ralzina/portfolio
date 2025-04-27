@@ -55,7 +55,7 @@ html {
   }
   
   .nav-menu li a:hover {
-    color: #3dd5a5; /* optional: blue highlight on hover */
+    color: #5e3dc2; /* optional: blue highlight on hover */
   }  
 
   .home {
@@ -130,25 +130,67 @@ html {
     flex-direction: column;
   }
   
-  .carousel {
+ 
+
+  .pic-ctn {
+    width: 100vw;
+    height: 200px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    align-self: center;
+    margin: 0;
   }
   
-  .carousel img {
-    width: 300px;
-    height: auto;
-    border-radius: 10px;
+  @keyframes display {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
   }
   
-  .carousel button {
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
+  .pic-ctn {
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    margin-top: 30px;
   }
+  
+  .pic-ctn > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display 10s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  img:nth-child(5) {
+    animation-delay: 8s;
+  }
+  
   
   .resume-pdf {
     width: 80%;
@@ -224,6 +266,12 @@ html {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333;
   }
   
   .project-card:hover {
@@ -256,7 +304,7 @@ html {
     margin-bottom: 2rem;
   }
   
-  #contact-form {
+  .contact-form {
     display: flex;
     flex-direction: column;
     max-width: 600px;
@@ -264,13 +312,12 @@ html {
     background-color: #f9f9f9;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
   .form-group {
     margin-bottom: 1.5rem;
     text-align: left;
-    margin-right: 1.5rem;
+    margin-right: 0rem;
   }
   
   .form-group label {
@@ -292,7 +339,7 @@ html {
   }
   
   .form-group input:focus, .form-group textarea:focus {
-    border-color: #3dd5a5;
+    border-color: #5e3dc2;
     outline: none;
   }
   
@@ -327,7 +374,7 @@ textarea {
 
 /* Optional: Focus styling */
 input:focus, textarea:focus {
-  border-color: #3dd5a5;  /* Blue border on focus */
+  border-color: #5e3dc2;  /* Blue border on focus */
   outline: none;
 }
 
@@ -387,7 +434,7 @@ body.dark-mode nav a {
 }
 
 body.dark-mode nav a:hover {
-  color: #3dd5a5;  /* Example hover color */
+  color: #5e3dc2;  /* Example hover color */
 }
 
 body.dark-mode nav .navbar-menu {
@@ -398,4 +445,119 @@ body.dark-mode .footer {
   background-color: rgba(10, 10, 29, 1); /* Dark blueish purple with slight transparency */
   color: #b0c4de; /* Light grayish blue */
   border-top: 1px solid #b0c4de; /* Grayish blue line at the top */
+}
+
+body.dark-mode .text {
+  color: #b0c4de;
+}
+
+/* Dark mode contact form background and text color */
+body.dark-mode .contact-form {
+  background-color: #15152b; /* Dark gray background */
+}
+
+body.dark-mode .form-title {
+  color: #b0c4de; /* Light blue-gray text */
+}
+
+/* Dark mode contact form input fields */
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background-color: #32395d; /* Match the background color */
+  border: 1px solid #b0c4de; /* Light blue-gray border */
+}
+
+/* Dark mode contact form placeholder text */
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+  color: #81858b; /* Light blue-gray placeholder text */
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  color: #b0c4de; /* Light blue-gray placeholder text */
+}
+
+/* Optional: Style for the submit button in dark mode */
+body.dark-mode .contact-form button {
+  background-color: #342169; /* Slightly darker background for the button */
+  color: #b0c4de; /* Light blue-gray text on the button */
+}
+
+body.dark-mode .form-group input:focus, 
+body.dark-mode .form-group textarea:focus {
+  border-color: #5e3dc2;
+  outline: none;
+}
+
+body.dark-mode .submit-btn {
+  background-color: #32395d;
+}
+
+body.dark-mode .submit-btn:hover {
+  background-color: #492e9b;
+}
+
+/* Dark mode styles for project cards */
+body.dark-mode .project-card {
+  background-color: #1e123e;  /* Dark background */
+  color: #b0c4de;  /* Light text color for normal text */
+}
+
+body.dark-mode .project-card h3 {
+  color: #ffffff;  /* Light color for the title */
+}
+
+body.dark-mode .project-card p {
+  color: #b0c4de;  /* Light color for the text */
+}
+
+/* Hover effect for dark mode */
+body.dark-mode .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);  /* Lighter hover effect */
+}
+
+
+
+.project-languages {
+  display: flex;
+  flex-wrap: wrap; /* Allow tags to wrap to the next line */
+  gap: 10px; /* Space between tags */
+  margin-top: 10px; /* Space between description and tags */
+}
+
+.tag {
+  padding: 5px 15px;
+  border-radius: 25px; /* Make the ends semi-circular */
+  color: white;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease;
+}
+
+.tag.html {
+  background-color: rgb(193, 126, 0);
+}
+
+.tag.css {
+  background-color: rgb(170, 0, 0);
+}
+
+.tag.javascript {
+  background-color: rgb(69, 151, 69);
+}
+
+.tag.python {
+  background-color: yellow;
+  color: black; /* To make Python text visible on yellow background */
+}
+
+.tag.tableau {
+  background-color: #31bebe;
+  color: black;
 }
