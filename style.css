@@ -126,8 +126,11 @@ html {
   .about {
     display: flex;
     width: 80vw;
+    margin: 0 auto;
     align-self: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
  
@@ -135,9 +138,6 @@ html {
   .pic-ctn {
     width: 100vw;
     height: 200px;
-    display: flex;
-    align-self: center;
-    margin: 0;
   }
   
   @keyframes display {
@@ -173,22 +173,24 @@ html {
   .pic-ctn > img {
     position: absolute;
     top: 0;
-    left: calc(50% - 100px);
+    left: calc(50% - 300px);
     opacity: 0;
-    animation: display 10s infinite;
+    animation: display 20s infinite;
+    width: 600px;
+    border-radius: 20px;
   }
   
   img:nth-child(2) {
-    animation-delay: 2s;
-  }
-  img:nth-child(3) {
     animation-delay: 4s;
   }
+  img:nth-child(3) {
+    animation-delay: 8s;
+  }
   img:nth-child(4) {
-    animation-delay: 6s;
+    animation-delay: 12s;
   }
   img:nth-child(5) {
-    animation-delay: 8s;
+    animation-delay: 16s;
   }
   
   
@@ -398,7 +400,7 @@ input:focus, textarea:focus {
 /* Style for the theme toggle icon */
 .theme-toggle {
   position: fixed;
-  top: 27px;
+  top: 35px;
   right: 50px;
   cursor: pointer;
   z-index: 1001;
@@ -537,27 +539,36 @@ body.dark-mode .project-card:hover {
   justify-content: center;
   font-size: 14px;
   text-transform: capitalize;
-  transition: background-color 0.3s ease;
+  transition: border 0.3s ease;
 }
 
 .tag.html {
   background-color: rgb(193, 126, 0);
+  border: 2px solid rgb(193, 126, 0);
 }
 
 .tag.css {
   background-color: rgb(170, 0, 0);
+  border: 2px solid rgb(170, 0, 0);
 }
 
 .tag.javascript {
   background-color: rgb(69, 151, 69);
+  border: 2px solid rgb(69, 151, 69);
 }
 
 .tag.python {
   background-color: yellow;
   color: black; /* To make Python text visible on yellow background */
+  border: 2px solid yellow;
 }
 
 .tag.tableau {
   background-color: #31bebe;
   color: black;
+  border: 2px solid #31bebe;
+}
+
+.tag:hover {
+  border: 2px solid black;
 }
