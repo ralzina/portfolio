@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
 
-    <!-- 16x16 favicon for most browsers -->
   <link rel="icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
 
-  <!-- 32x32 favicon for high-resolution displays -->
   <link rel="icon" href="images/favicon-32x32.png" sizes="32x32" type="image/png">
-
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -38,7 +35,7 @@
 
   <section id="about" class="about" style="padding-top: 13vh">
     <h2>About Me</h2>
-    <p class="text" style="text-align: justify;">I'm a passionate sophomore computer science student from the 
+    <p class="text" style="text-align: justify; margin-top: 0;">I'm a passionate sophomore computer science student from the 
         University of Notre Dame graduating May 2027. I am also minoring in Engineering Corporate Practice.
         I am very interested in web development, data science, and computer networking. I have pursued
         multiple projects in these areas whether by my own, in classes, clubs, or as research with Notre Dame.
@@ -66,6 +63,10 @@
 
   <section id="projects" class="projects" style="padding-top: 13vh">
     <h2>Projects</h2>
+    <p class="text" style="text-align: justify; margin-top: 0; margin-bottom: 20px;">These are some of the projects that I've worked on.
+      Click on each project to see more information about them.
+    </p>
+
     <div class="projects-grid">
         <a href="https://ralzina.github.io/Study_Helper_App/" target="_blank">
       <div class="project-card">
@@ -145,11 +146,11 @@
     (function() {
     emailjs.init({
             publicKey: "_ZLu-H_O_UZ0aEsuR"
-        }); // Replace with your EmailJS user ID
+        });
     })();
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent form from submitting normally
+    event.preventDefault();
     
     var formData = new FormData(this);
     var name = formData.get('name');

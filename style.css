@@ -26,10 +26,10 @@ html {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: rgba(255, 255, 255, 0.9); /* Dark blueish purple with slight transparency */
+    background-color: rgba(255, 255, 255, 0.9); 
     padding: 10px 30px;
-    border-radius: 50px; /* this gives it the "pill" shape */
-    border: 1px solid #4b4b4b; /* Grayish blue border around the navbar */
+    border-radius: 50px; 
+    border: 1px solid #4b4b4b;
     z-index: 1000;
     height: 30px;
     display: flex;
@@ -55,21 +55,21 @@ html {
   }
   
   .nav-menu li a:hover {
-    color: #5e3dc2; /* optional: blue highlight on hover */
+    color: #5e3dc2; 
   }  
 
   .home {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 20px 50px; /* enough top padding so it's below the navbar */
+    padding: 100px 20px 50px; 
     min-height: 100vh;
   }
   
   .home-content {
     display: flex;
     align-items: center;
-    gap: 50px; /* space between image and text */
+    gap: 50px; 
     max-width: 1200px;
     width: 100%;
   }
@@ -77,7 +77,7 @@ html {
   .profile-pic {
     width: 200px;
     height: 200px;
-    border-radius: 50%; /* make it a circle */
+    border-radius: 50%; 
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
@@ -206,13 +206,13 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff; /* match the body background */
-    color: #333; /* normal text color */
+    background-color: #ffffff; 
+    color: #333; 
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid #ccc; /* light gray line at top */
+    border-top: 1px solid #ccc;
     z-index: 1000;
   }
   
@@ -231,11 +231,11 @@ html {
 }
 
 .footer-content .left {
-  padding-left: 20ox; /* 5vw from the left edge */
+  padding-left: 20ox; 
 }
 
 .footer-content .right {
-  padding-right: 20px; /* 5vw from the right edge */
+  padding-right: 20px; 
 }
   
   .footer-icons a {
@@ -246,12 +246,19 @@ html {
   .footer-icons .icon {
     width: 24px;
     height: 24px;
-    filter: none; /* no invert now since background is light */
+    filter: none; 
   }  
   
   .projects {
     padding: 50px 20px;
     text-align: center;
+    display: flex;
+    width: 90vw;
+    margin: 0 auto;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
   .projects-grid {
@@ -349,7 +356,6 @@ html {
     resize: vertical;
   }
 
-  /* Apply Consolas font to all form inputs and textarea */
 input, textarea {
   font-family: 'Helvetica Neue', sans-serif;
   font-size: 16px;
@@ -362,21 +368,18 @@ input, textarea {
   margin-bottom: 15px;
 }
 
-/* Customize the placeholder text */
 input::placeholder, textarea::placeholder {
   font-family: 'Helvetica Neue', sans-serif;
-  color: #777;  /* Light grey for the placeholder text */
+  color: #777;  
 }
 
-/* Adjust textarea specifically for better display */
 textarea {
   height: 150px;
-  resize: vertical;  /* Allow vertical resizing */
+  resize: vertical;  
 }
 
-/* Optional: Focus styling */
 input:focus, textarea:focus {
-  border-color: #5e3dc2;  /* Blue border on focus */
+  border-color: #5e3dc2;  
   outline: none;
 }
 
@@ -396,8 +399,6 @@ input:focus, textarea:focus {
     background-color: #000000;
   }
 
-
-/* Style for the theme toggle icon */
 .theme-toggle {
   position: fixed;
   top: 35px;
@@ -413,77 +414,72 @@ input:focus, textarea:focus {
 }
 
 .theme-toggle img:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  transform: scale(1.1); 
 }
 
-/* Dark theme styles */
 body.dark-mode {
-  background-color: #0a0a1d; /* Dark blueish purple */
+  background-color: #0a0a1d; 
   color: #fff;
   
 }
 
 body.dark-mode nav {
-  background-color: rgba(10, 10, 29, 0.9); /* Dark blueish purple with slight transparency */
-  color: #b0c4de;  /* Light grayish blue */
-  border: 1px solid #b0c4de; /* Grayish blue border around the navbar */
-  border-radius: 50px; /* Rounded corners for the pill shape */
-  padding: 10px 30px; /* Ensure padding stays intact */
+  background-color: rgba(10, 10, 29, 0.9);
+  color: #b0c4de;  
+  border: 1px solid #b0c4de; 
+  border-radius: 50px; 
+  padding: 10px 30px; 
 }
 
 body.dark-mode nav a {
-  color: #b0c4de; /* Light grayish blue for links */
+  color: #b0c4de; 
 }
 
 body.dark-mode nav a:hover {
-  color: #5e3dc2;  /* Example hover color */
+  color: #5e3dc2; 
 }
 
 body.dark-mode nav .navbar-menu {
-  color: #b0c4de;  /* Ensure all text within navbar menu is grayish blue */
+  color: #b0c4de;  
 }
 
 body.dark-mode .footer {
-  background-color: rgba(10, 10, 29, 1); /* Dark blueish purple with slight transparency */
-  color: #b0c4de; /* Light grayish blue */
-  border-top: 1px solid #b0c4de; /* Grayish blue line at the top */
+  background-color: rgba(10, 10, 29, 1); 
+  color: #b0c4de; 
+  border-top: 1px solid #b0c4de; 
 }
 
 body.dark-mode .text {
   color: #b0c4de;
 }
 
-/* Dark mode contact form background and text color */
 body.dark-mode .contact-form {
-  background-color: #15152b; /* Dark gray background */
+  background-color: #15152b;
 }
 
 body.dark-mode .form-title {
-  color: #b0c4de; /* Light blue-gray text */
+  color: #b0c4de; 
 }
 
-/* Dark mode contact form input fields */
 body.dark-mode .contact-form input,
 body.dark-mode .contact-form textarea {
-  background-color: #32395d; /* Match the background color */
-  border: 1px solid #b0c4de; /* Light blue-gray border */
+  background-color: #32395d; 
+  border: 1px solid #b0c4de; 
 }
 
-/* Dark mode contact form placeholder text */
 body.dark-mode .contact-form input::placeholder,
 body.dark-mode .contact-form textarea::placeholder {
-  color: #81858b; /* Light blue-gray placeholder text */
+  color: #81858b; 
 }
 
 body.dark-mode .contact-form input,
 body.dark-mode .contact-form textarea {
-  color: #b0c4de; /* Light blue-gray placeholder text */
+  color: #b0c4de; 
 }
 
-/* Optional: Style for the submit button in dark mode */
 body.dark-mode .contact-form button {
-  background-color: #342169; /* Slightly darker background for the button */
-  color: #b0c4de; /* Light blue-gray text on the button */
+  background-color: #342169; 
+  color: #b0c4de;
 }
 
 body.dark-mode .form-group input:focus, 
@@ -500,38 +496,36 @@ body.dark-mode .submit-btn:hover {
   background-color: #492e9b;
 }
 
-/* Dark mode styles for project cards */
 body.dark-mode .project-card {
-  background-color: #1e123e;  /* Dark background */
-  color: #b0c4de;  /* Light text color for normal text */
+  background-color: #1e123e;  
+  color: #b0c4de; 
 }
 
 body.dark-mode .project-card h3 {
-  color: #ffffff;  /* Light color for the title */
+  color: #ffffff; 
 }
 
 body.dark-mode .project-card p {
-  color: #b0c4de;  /* Light color for the text */
+  color: #b0c4de;  
 }
 
-/* Hover effect for dark mode */
 body.dark-mode .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);  /* Lighter hover effect */
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);  
 }
 
 
 
 .project-languages {
   display: flex;
-  flex-wrap: wrap; /* Allow tags to wrap to the next line */
-  gap: 10px; /* Space between tags */
-  margin-top: 10px; /* Space between description and tags */
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin-top: 10px; 
 }
 
 .tag {
   padding: 5px 15px;
-  border-radius: 25px; /* Make the ends semi-circular */
+  border-radius: 25px; 
   color: white;
   font-weight: 600;
   display: inline-flex;
@@ -559,7 +553,7 @@ body.dark-mode .project-card:hover {
 
 .tag.python {
   background-color: yellow;
-  color: black; /* To make Python text visible on yellow background */
+  color: black; 
   border: 2px solid yellow;
 }
 
