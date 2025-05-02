@@ -572,3 +572,42 @@ body.dark-mode .project-card:hover {
 .tag:hover {
   border: 2px solid black;
 }
+
+.contact-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 300px;
+  margin: 0 auto 30px auto;
+}
+
+body.dark-mode .contact-card {
+  background-color: #15152b;
+  color: #b0c4de; 
+  padding: 20px;
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 300px;
+  margin: 0 auto 30px auto;
+}
+
+body.dark-mode .contact-card a {
+  color: #5e3dc2
+}
+
+#giticon {
+  width: 20px;
+}
+
+#linkicon {
+  width: 20px;
+}
+
+#giticon-footer {
+  width: 20px;
+}
+
+#linkicon-footer {
+  width: 20px;
+}
