@@ -270,7 +270,7 @@ html {
   }
   
   .project-card {
-    background-color: #f9f9f9;
+    background-color: #8888881a;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -318,7 +318,7 @@ html {
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-    background-color: #f9f9f9;
+    background-color: #8888881a;
     padding: 2rem;
     border-radius: 8px;
   }
@@ -574,12 +574,20 @@ body.dark-mode .project-card:hover {
 }
 
 .contact-card {
-  background-color: #f9f9f9;
+  background-color: #8888881a;
   padding: 20px;
   border-radius: 8px;
   width: fit-content;
   max-width: 300px;
   margin: 0 auto 30px auto;
+}
+
+.contact-card a {
+  color: #5e3dc2;
+}
+
+.contact-card a:hover {
+  color: blue;
 }
 
 body.dark-mode .contact-card {
@@ -593,7 +601,12 @@ body.dark-mode .contact-card {
 }
 
 body.dark-mode .contact-card a {
-  color: #5e3dc2
+  color: #5e3dc2;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .contact-card a:hover{
+  color: #fff;
 }
 
 #giticon {
@@ -610,4 +623,35 @@ body.dark-mode .contact-card a {
 
 #linkicon-footer {
   width: 20px;
+}
+
+.home-contact {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+}
+
+body.dark-mode .home-contact a{
+  background-color: #15152b;
+  color: #5e3dc2;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .home-contact a:hover {
+  background-color: #5e3dc2;
+  color: #fff;
+}
+
+.home-contact a {
+  background-color: #8888881a;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.home-contact a:hover {
+  background-color: #4e4e4e;
+  color: #fff;
 }
