@@ -569,6 +569,12 @@ body.dark-mode .project-card:hover {
   border: 2px solid blue;
 }
 
+.tag.C {
+  background-color: rgb(122, 193, 240);
+  border: 2px solid rgb(122, 193, 240);
+  color: white;
+}
+
 .tag:hover {
   border: 2px solid black;
 }
