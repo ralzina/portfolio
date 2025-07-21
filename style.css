@@ -10,7 +10,7 @@ html {
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
   }
 
   h2 {
@@ -62,37 +62,10 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 20px 50px; 
+    padding: 0;
     min-height: 100vh;
   }
-  
-  .home-content {
-    display: flex;
-    align-items: center;
-    gap: 50px; 
-    max-width: 1200px;
-    width: 100%;
-  }
-  
-  .profile-pic {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; 
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  
-  .intro-text h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-  }
-  
-  .intro-text h2 {
-    font-size: 28px;
-    font-weight: 400;
-    color: #555;
-  }  
-  
+
   section {
     padding: 4rem 2rem;
     text-align: center;
@@ -103,7 +76,7 @@ html {
     height: 250px;
     object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 1rem;
+    margin-right: 5vw;
   }
 
   .intro {
@@ -250,15 +223,19 @@ html {
   }  
   
   .projects {
-    padding: 50px 20px;
     text-align: center;
     display: flex;
-    width: 90vw;
+    width: 80vw;
     margin: 0 auto;
-    align-self: center;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+
+  .projects p{
+    text-align: justify; 
+    margin-top: 0; 
+    margin-bottom: 20px;
   }
   
   .projects-grid {
@@ -660,4 +637,101 @@ body.dark-mode .home-contact a:hover {
 .home-contact a:hover {
   background-color: #4e4e4e;
   color: #fff;
+}
+
+/* Mobile Phones */
+@media (max-width: 800px) {
+  /* Navbar */
+  .navbar {
+    height: 20px;
+  }
+  
+  .nav-menu {
+    gap: 12px;
+  }
+  
+  .nav-menu li a {
+    font-size: 14px;
+  }
+
+  /* Home Section */
+
+  .home {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 200px;
+    width: 100%;
+    padding: 0; 
+  }
+
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    margin-right: 0;
+  }
+
+  .intro {
+    align-items:center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .intro h1 {
+    font-size: 1.5rem;    
+    margin-top: 40px;
+  }
+  
+  .intro h2 {
+    font-size: 1rem;
+    margin-top: 40px;
+  }
+
+  .home-contact {
+    justify-content: center;
+    font-size: .8rem;
+    margin-top: 20px;
+  }
+
+  /* About Image Carousel */
+  .pic-ctn {
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    margin-top: 30px;
+  }
+  
+  .pic-ctn > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 150px);
+    opacity: 0;
+    animation: display 20s infinite;
+    width: 300px;
+    border-radius: 20px;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 4s;
+  }
+  img:nth-child(3) {
+    animation-delay: 8s;
+  }
+  img:nth-child(4) {
+    animation-delay: 12s;
+  }
+  img:nth-child(5) {
+    animation-delay: 16s;
+  }
+
+  /* Projects Section */
+  .projects {
+    width: 80vw;
+  }
+  
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
