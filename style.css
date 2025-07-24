@@ -11,6 +11,7 @@ html {
     display: flex;
     flex-direction: column;
     width: 100vw;
+    align-items: center;
   }
 
   h2 {
@@ -24,13 +25,10 @@ html {
   .navbar {
     position: fixed;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: rgba(255, 255, 255, 0.9); 
     padding: 10px 30px;
     border-radius: 50px; 
     border: 1px solid #4b4b4b;
-    z-index: 1000;
     height: 30px;
     display: flex;
     justify-content: space-between;
@@ -60,10 +58,13 @@ html {
 
   .home {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 0;
     min-height: 100vh;
+    margin-top: -30px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   section {
@@ -83,7 +84,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    text-align: center;
+    text-align: left;
   }
   
   .intro h1 {
@@ -106,7 +107,12 @@ html {
     justify-content: center;
   }
   
- 
+  .about p {
+    font-size: 1.2rem;
+    text-align: 
+    justify; 
+    margin-top: 0;
+  }
 
   .pic-ctn {
     width: 100vw;
@@ -168,7 +174,7 @@ html {
   
   
   .resume-pdf {
-    width: 80%;
+    width: 70vw;
     height: 600px;
     border: 1px solid #ccc;
     margin-top: 1rem;
@@ -210,6 +216,11 @@ html {
 .footer-content .right {
   padding-right: 20px; 
 }
+
+.footer-icons {
+  display: flex;
+  flex-direction: row;
+}
   
   .footer-icons a {
     margin-left: 15px;
@@ -232,10 +243,11 @@ html {
     justify-content: center;
   }
 
-  .projects p{
+  .projects p {
     text-align: justify; 
     margin-top: 0; 
     margin-bottom: 20px;
+    font-size: 1.2rem;
   }
   
   .projects-grid {
@@ -267,27 +279,17 @@ html {
   
   .project-card h3 {
     margin-bottom: 10px;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   
   .project-card p {
-    font-size: 16px;
+    font-size: 1rem;
     color: #555;
   }
   
   .contact {
     padding: 4rem 2rem;
     text-align: center;
-  }
-  
-  .contact h2 {
-    margin-bottom: 1rem;
-  }
-  
-  .contact p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 2rem;
   }
   
   .contact-form {
@@ -378,8 +380,8 @@ input:focus, textarea:focus {
 
 .theme-toggle {
   position: fixed;
-  top: 35px;
-  right: 50px;
+  top: 32px;
+  right: 30px;
   cursor: pointer;
   z-index: 1001;
 }
@@ -400,7 +402,7 @@ body.dark-mode {
   
 }
 
-body.dark-mode nav {
+body.dark-mode .navbar {
   background-color: rgba(10, 10, 29, 0.9);
   color: #b0c4de;  
   border: 1px solid #b0c4de; 
@@ -408,16 +410,12 @@ body.dark-mode nav {
   padding: 10px 30px; 
 }
 
-body.dark-mode nav a {
+body.dark-mode .nav-menu li a {
   color: #b0c4de; 
 }
 
-body.dark-mode nav a:hover {
+body.dark-mode .nav-menu li a:hover {
   color: #5e3dc2; 
-}
-
-body.dark-mode nav .navbar-menu {
-  color: #b0c4de;  
 }
 
 body.dark-mode .footer {
@@ -426,7 +424,7 @@ body.dark-mode .footer {
   border-top: 1px solid #b0c4de; 
 }
 
-body.dark-mode .text {
+body.dark-mode .intro h2 {
   color: #b0c4de;
 }
 
@@ -434,7 +432,7 @@ body.dark-mode .contact-form {
   background-color: #15152b;
 }
 
-body.dark-mode .form-title {
+body.dark-mode .form-group label {
   color: #b0c4de; 
 }
 
@@ -558,11 +556,18 @@ body.dark-mode .project-card:hover {
 
 .contact-card {
   background-color: #8888881a;
-  padding: 20px;
+  /*padding: 20px;*/
   border-radius: 8px;
-  width: fit-content;
+  /*width: fit-content;*/
   max-width: 300px;
-  margin: 0 auto 30px auto;
+  /*margin: 0 auto 30px auto;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-card p {
+  margin-bottom: .2rem;
 }
 
 .contact-card a {
@@ -658,10 +663,10 @@ body.dark-mode .home-contact a:hover {
 
   .home {
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 200px;
+    justify-content: center;
     width: 100%;
     padding: 0; 
+    margin-top: -20px;
   }
 
   .profile-pic {
@@ -674,34 +679,39 @@ body.dark-mode .home-contact a:hover {
     align-items:center;
     padding-left: 20px;
     padding-right: 20px;
+    text-align: center;
   }
   
   .intro h1 {
     font-size: 1.5rem;    
-    margin-top: 40px;
+    margin-top: 20px;
   }
   
   .intro h2 {
     font-size: 1rem;
-    margin-top: 40px;
+    margin-top: 10px;
   }
 
   .home-contact {
     justify-content: center;
     font-size: .8rem;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   /* About Image Carousel */
+  .about p {
+    font-size: 1rem;
+  }
+
   .pic-ctn {
-    position: relative;
+    /*position: relative;*/
     width: 100vw;
     height: 300px;
     margin-top: 30px;
   }
   
   .pic-ctn > img {
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     left: calc(50% - 150px);
     opacity: 0;
@@ -733,5 +743,21 @@ body.dark-mode .home-contact a:hover {
     flex-direction: column;
     padding-left: 30px;
     padding-right: 30px;
+  }
+
+  .projects p {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem; 
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .project-card p {
+    font-size: 1rem;
   }
 }
