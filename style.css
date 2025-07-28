@@ -666,7 +666,7 @@ body.dark-mode .home-contact a:hover {
     justify-content: center;
     width: 100%;
     padding: 0; 
-    margin-top: -20px;
+    margin-top: -50px;
   }
 
   .profile-pic {
@@ -759,5 +759,13 @@ body.dark-mode .home-contact a:hover {
   
   .project-card p {
     font-size: 1rem;
+  }
+
+  
+}
+
+@media (max-width: 400px) {
+  .theme-toggle {
+    top: 80px;
   }
 }
