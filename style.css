@@ -5,8 +5,8 @@ html {
   body {
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
-    background: #fff;
-    color: #333;
+    background: #0a0a1d;
+    color: #fff;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -25,15 +25,16 @@ html {
   .navbar {
     position: fixed;
     top: 20px;
-    background-color: rgba(255, 255, 255, 0.9); 
+    background-color: rgba(10, 10, 29, 0.9); 
     padding: 10px 30px;
     border-radius: 50px; 
-    border: 1px solid #4b4b4b;
+    border: 1px solid #b0c4de;
     height: 30px;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    z-index: 1000;
   }
   
   .nav-menu {
@@ -46,7 +47,7 @@ html {
   
   .nav-menu li a {
     text-decoration: none;
-    color: #4b4b4b;
+    color: #b0c4de;
     font-weight: 500;
     font-size: 16px;
     transition: color 0.3s ease;
@@ -94,7 +95,7 @@ html {
   
   .intro h2 {
     font-size: 1.5rem;
-    color: #777;
+    color: #b0c4de;
   }
 
   .about {
@@ -185,13 +186,13 @@ html {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff; 
-    color: #333; 
+    background-color: rgba(10, 10, 29, 1); 
+    color: #b0c4de; 
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #b0c4de;
     z-index: 1000;
   }
   
@@ -259,32 +260,32 @@ html {
   }
   
   .project-card {
-    background-color: #8888881a;
+    background-color: #1e123e;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 200px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #333;
+    color: #b0c4de;
   }
   
   .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
   }
   
   .project-card h3 {
     margin-bottom: 10px;
     font-size: 1.5rem;
+    color: #fff;
   }
   
   .project-card p {
     font-size: 1rem;
-    color: #555;
   }
   
   .contact {
@@ -297,7 +298,7 @@ html {
     flex-direction: column;
     max-width: 600px;
     margin: 0 auto;
-    background-color: #8888881a;
+    background-color: #15152b;
     padding: 2rem;
     border-radius: 8px;
   }
@@ -310,7 +311,7 @@ html {
   
   .form-group label {
     font-size: 1.1rem;
-    color: #333;
+    color: #b0c4de;
     margin-bottom: 0.5rem;
     display: block;
   }
@@ -318,11 +319,11 @@ html {
   .form-group input, .form-group textarea {
     width: 100%;
     padding: 0.8rem;
-    border: 1px solid #ccc;
+    border: 1px solid #b0c4de;
     border-radius: 6px;
     font-size: 1rem;
-    color: #333;
-    background-color: #fff;
+    color: #b0c4de;
+    background-color: #32395d;
     transition: border-color 0.3s ease;
   }
   
@@ -349,7 +350,7 @@ input, textarea {
 
 input::placeholder, textarea::placeholder {
   font-family: 'Helvetica Neue', sans-serif;
-  color: #777;  
+  color: #81858b;  
 }
 
 textarea {
@@ -364,8 +365,8 @@ input:focus, textarea:focus {
 
   
   .submit-btn {
-    background-color: #4e4e4e;
-    color: white;
+    background-color: #342169;
+    color: #b0c4de;
     font-size: 1.1rem;
     padding: 1rem;
     border: none;
@@ -375,7 +376,7 @@ input:focus, textarea:focus {
   }
   
   .submit-btn:hover {
-    background-color: #000000;
+    background-color: #492e9b;
   }
 
 .theme-toggle {
@@ -396,97 +397,87 @@ input:focus, textarea:focus {
   transform: scale(1.1); 
 }
 
-body.dark-mode {
-  background-color: #0a0a1d; 
-  color: #fff;
+body.light-mode {
+  background-color: #fff; 
+  color: #333;
   
 }
 
-body.dark-mode .navbar {
-  background-color: rgba(10, 10, 29, 0.9);
+body.light-mode .navbar {
+  background-color: rgba(255, 255, 255, 0.9);
   color: #b0c4de;  
-  border: 1px solid #b0c4de; 
+  border: 1px solid #4b4b4b; 
   border-radius: 50px; 
   padding: 10px 30px; 
 }
 
-body.dark-mode .nav-menu li a {
-  color: #b0c4de; 
+body.light-mode .nav-menu li a {
+  color: #4b4b4b; 
 }
 
-body.dark-mode .nav-menu li a:hover {
+body.light-mode .nav-menu li a:hover {
   color: #5e3dc2; 
 }
 
-body.dark-mode .footer {
-  background-color: rgba(10, 10, 29, 1); 
-  color: #b0c4de; 
-  border-top: 1px solid #b0c4de; 
+body.light-mode .footer {
+  background-color: #ffffff; 
+  color: #333; 
+  border-top: 1px solid #ccc; 
 }
 
-body.dark-mode .intro h2 {
-  color: #b0c4de;
+body.light-mode .intro h2 {
+  color: #777;
 }
 
-body.dark-mode .contact-form {
-  background-color: #15152b;
+body.light-mode .contact-form {
+  background-color: #8888881a;
 }
 
-body.dark-mode .form-group label {
-  color: #b0c4de; 
+body.light-mode .form-group label {
+  color: #333; 
 }
 
-body.dark-mode .contact-form input,
-body.dark-mode .contact-form textarea {
-  background-color: #32395d; 
-  border: 1px solid #b0c4de; 
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+  background-color: #fff; 
+  border: 1px solid #ccc; 
 }
 
-body.dark-mode .contact-form input::placeholder,
-body.dark-mode .contact-form textarea::placeholder {
-  color: #81858b; 
+body.light-mode .contact-form input::placeholder,
+body.light-mode .contact-form textarea::placeholder {
+  color: #777; 
 }
 
-body.dark-mode .contact-form input,
-body.dark-mode .contact-form textarea {
-  color: #b0c4de; 
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+  color: #333; 
 }
 
-body.dark-mode .contact-form button {
-  background-color: #342169; 
-  color: #b0c4de;
+body.light-mode .contact-form button {
+  background-color: #4e4e4e; 
+  color: white;
 }
 
-body.dark-mode .form-group input:focus, 
-body.dark-mode .form-group textarea:focus {
-  border-color: #5e3dc2;
-  outline: none;
+body.light-mode .submit-btn:hover {
+  background-color: #000;
 }
 
-body.dark-mode .submit-btn {
-  background-color: #32395d;
+body.light-mode .project-card {
+  background-color: #8888881a;  
+  color: #333; 
 }
 
-body.dark-mode .submit-btn:hover {
-  background-color: #492e9b;
+body.light-mode .project-card h3 {
+  color: #333; 
 }
 
-body.dark-mode .project-card {
-  background-color: #1e123e;  
-  color: #b0c4de; 
+body.light-mode .project-card p {
+  color: #555;  
 }
 
-body.dark-mode .project-card h3 {
-  color: #ffffff; 
-}
-
-body.dark-mode .project-card p {
-  color: #b0c4de;  
-}
-
-body.dark-mode .project-card:hover {
+body.light-mode .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);  
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);  
 }
 
 
@@ -555,15 +546,15 @@ body.dark-mode .project-card:hover {
 }
 
 .contact-card {
-  background-color: #8888881a;
-  /*padding: 20px;*/
-  border-radius: 8px;
-  /*width: fit-content;*/
-  max-width: 300px;
-  /*margin: 0 auto 30px auto;*/
+  background-color: #15152b;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  width: fit-content;
+  max-width: 300px;
+  margin: 0 auto 30px auto;
 }
 
 .contact-card p {
@@ -575,26 +566,21 @@ body.dark-mode .project-card:hover {
 }
 
 .contact-card a:hover {
-  color: blue;
+  color:  #fff;
 }
 
-body.dark-mode .contact-card {
-  background-color: #15152b;
-  color: #b0c4de; 
-  padding: 20px;
-  border-radius: 8px;
-  width: fit-content;
-  max-width: 300px;
-  margin: 0 auto 30px auto;
+body.light-mode .contact-card {
+  background-color: #8888881a;
+  color: #333; 
 }
 
-body.dark-mode .contact-card a {
+body.light-mode .contact-card a {
   color: #5e3dc2;
   transition: all 0.3s ease;
 }
 
-body.dark-mode .contact-card a:hover{
-  color: #fff;
+body.light-mode .contact-card a:hover{
+  color: blue;
 }
 
 #giticon {
@@ -620,27 +606,27 @@ body.dark-mode .contact-card a:hover{
   width: 100%;
 }
 
-body.dark-mode .home-contact a{
-  background-color: #15152b;
-  color: #5e3dc2;
-  transition: all 0.3s ease;
-}
-
-body.dark-mode .home-contact a:hover {
-  background-color: #5e3dc2;
-  color: #fff;
-}
-
-.home-contact a {
+body.light-mode .home-contact a{
   background-color: #8888881a;
-  padding: 10px 20px;
-  border-radius: 8px;
   color: #333;
   transition: all 0.3s ease;
 }
 
+body.light-mode .home-contact a:hover {
+  background-color:  #4e4e4e;
+  color: #fff;
+}
+
+.home-contact a {
+  background-color: #15152b;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color:  #5e3dc2;
+  transition: all 0.3s ease;
+}
+
 .home-contact a:hover {
-  background-color: #4e4e4e;
+  background-color: #5e3dc2;
   color: #fff;
 }
 
@@ -751,6 +737,10 @@ body.dark-mode .home-contact a:hover {
 
   h2 {
     font-size: 1.5rem; 
+  }
+
+  .project-card {
+    height: fit-content;
   }
 
   .project-card h3 {
