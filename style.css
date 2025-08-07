@@ -541,6 +541,12 @@ body.light-mode .project-card:hover {
   color: white;
 }
 
+.tag.Processing {
+	background-color: rgb(134, 52, 235);
+	border: 2px solid rgb(134, 52, 235);
+	color: white;
+}
+
 .tag:hover {
   border: 2px solid black;
 }
