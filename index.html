@@ -18,7 +18,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#resume">Resume</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <!--<li><a href="#contact">Contact</a></li>-->
         </ul>
       </nav>
       
@@ -229,7 +229,8 @@
     <iframe src="Rene Alzina Tech Resume.pdf" frameborder="0" class="resume-pdf"></iframe>
   </section>
 
-  <section id="contact" class="contact-container" style="padding-top: 13vh">
+  <!--
+    <section id="contact" class="contact-container" style="padding-top: 13vh">
     <h2>Contact</h2>
     <div class="contact-card">
       <p>School Email:    <a href="mailto:ralzina@nd.edu">ralzina@nd.edu</a></p>
@@ -243,7 +244,7 @@
           <img id="linkicon-footer" src="images/linkedin-light.svg" alt="LinkedIn" class="icon">
         </a>
       </div>
-    </div>
+    </div> 
     <p class="text">Feel free to send me a message, and I will get back to you as soon as possible!</p>
     <form id="contact-form">
       <div class="contact-form">
@@ -270,7 +271,7 @@
   <script type="text/javascript">
     (function() {
     emailjs.init({
-            publicKey: "_ZLu-H_O_UZ0aEsuR"
+            publicKey: "publicKey"
         });
     })();
 
@@ -288,7 +289,7 @@
       message: message
     };
 
-    emailjs.send('service_yffwo8u', 'template_6kroukr', templateParams).then(function(response) {
+    emailjs.send('service', 'template', templateParams).then(function(response) {
         alert('Your message has been sent successfully!');
       }, function(error) {
         alert('There was an error sending your message. Please try again.');
@@ -296,6 +297,7 @@
 
   });
   </script>
+  -->
 
   <footer class="footer">
     <div class="footer-content">
